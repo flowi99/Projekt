@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import { vConfetti } from '@neoconfetti/vue';
 </script>
 
 <template>
@@ -8,6 +9,8 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
+      <div v-confetti />
+      <div v-confetti="{ particleCount: 200, force: 0.9, particleSize: 20, duration: 15000, colors: ['#ffffff', '#41BBC7']}" />
       <HelloWorld msg="You did it!" />
     </div>
   </header>
